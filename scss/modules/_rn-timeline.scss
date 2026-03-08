@@ -1,0 +1,166 @@
+.rn-timeline {
+  background-color: var(--Secondary-3);
+  padding: 40px 0;
+
+  @include lg-up {
+    padding: 80px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__title {
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--Secondary-2);
+    text-align: center;
+    margin: 0;
+
+    @include md-up {
+      font-size: 40px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: -16px; // Offset for gap
+  }
+
+  &__tab {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 12px;
+    border: none;
+    border-bottom: 4px solid #ccbbab;
+    background: transparent;
+    color: #ada093;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+
+    @include md-up {
+      padding-bottom: 16px;
+      font-size: 24px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &.active {
+      border-bottom-color: var(--Secondary-2);
+      color: var(--Secondary-2);
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__panel {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include lg-up {
+      flex-direction: row;
+    }
+  }
+
+  &__card {
+    flex: 1;
+    background-color: var(--Secondary);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; // For mobile
+    gap: 16px;
+
+    @include lg-up {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__card-image {
+    width: 140px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    @include lg-up {
+      width: 100%;
+    }
+
+    &.placeholder {
+      background-color: #e6e6e6;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex: 1;
+  }
+
+  &__tag {
+    background-color: var(--Secondary-3);
+    color: var(--Secondary-2);
+    padding: 6px 10px;
+    border-radius: 100px;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__desc {
+    color: #111;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+  }
+}
+
+br.only-mobile {
+  display: block;
+  @include md-up {
+    display: none;
+  }
+}

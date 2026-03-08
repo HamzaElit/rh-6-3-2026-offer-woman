@@ -1,0 +1,158 @@
+@import "../mixins/mixins-master";
+
+.rn-package-details {
+  background-color: var(--Secondary-3);
+  padding-block: 4rem;
+
+  @include md-up {
+    padding-block: 6rem;
+  }
+  @include lg-up {
+    padding-block: 8rem;
+  }
+
+  &__header {
+    text-align: left;
+    color: var(--Secondary-2);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1.6rem;
+
+    @include md-up {
+      text-align: center;
+      max-width: 47.8rem;
+      margin-inline: auto;
+      gap: 0.8rem;
+      margin-bottom: 2.4rem;
+    }
+    @include lg-up {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-text);
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+
+    @include md-up {
+      font-size: 3.2rem;
+    }
+    @include lg-up {
+      font-size: 4rem;
+    }
+  }
+
+  &__subtitle {
+    font-family: var(--font-text);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+
+    @include md-up {
+      font-size: 2rem;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+
+    @include md-up {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.4rem;
+    }
+    @include lg-up {
+      gap: 3.2rem;
+    }
+  }
+
+  &__item {
+    background-color: var(--Secondary);
+    border-radius: 0.8rem;
+    padding: 0.8rem;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content;
+    column-gap: 0.6rem;
+    row-gap: 0.4rem;
+    overflow: hidden;
+
+    @include md-up {
+      padding: 1.6rem;
+      column-gap: 0.6rem;
+      row-gap: 0.8rem;
+    }
+    @include lg-up {
+      padding: 2rem 1.6rem;
+    }
+  }
+
+  &__item-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    object-fit: contain;
+    line-height: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    &--small {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    @include md-up {
+      width: 2.4rem;
+      height: 2.4rem;
+      &--small {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+  }
+
+  &__item-title {
+    font-family: var(--font-text);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--Black);
+    margin: 0;
+    white-space: normal;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    @include md-up {
+      font-size: 2rem;
+    }
+    @include lg-up {
+      font-size: 2.3rem;
+      white-space: nowrap;
+    }
+  }
+
+  &__item-text {
+    font-family: var(--font-text);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--Black);
+    margin: 0;
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    @include md-up {
+      font-size: 1.8rem;
+      line-height: 1.4;
+    }
+    @include lg-up {
+      font-size: 2rem;
+    }
+  }
+}

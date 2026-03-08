@@ -1,0 +1,213 @@
+.rn-app-review {
+  background-color: var(--Secondary-3);
+  padding: 3.2rem 0;
+
+  @include lg-up {
+    padding: 6rem 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+
+    @include md-up {
+      gap: 2.4rem;
+    }
+
+    @include lg-up {
+      flex-direction: column;
+      justify-content: center;
+      gap: 3.2rem;
+    }
+
+    @include xl-up {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 4.8rem;
+    }
+  }
+
+  &__message {
+    border: 1px solid var(--Secondary-2);
+    border-radius: 1.2rem;
+    padding: 2.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 82.2rem;
+    background-color: transparent;
+    color: var(--Black);
+
+    @include md-up {
+      padding: 3.2rem;
+    }
+  }
+
+  &__greeting {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+    margin: 0;
+
+    &-hallo {
+      font-family: var(--font-text);
+      font-weight: 700;
+      font-size: 2.8rem;
+      line-height: 1.2;
+
+      @include md-up {
+        font-size: 4rem;
+      }
+    }
+
+    &-name {
+      font-family: var(--font-text);
+      font-weight: 600;
+      font-size: 2.2rem;
+      line-height: 1.2;
+
+      @include md-up {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &__text {
+    font-family: var(--font-text);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin: 0;
+
+    @include md-up {
+      font-size: 2rem;
+    }
+  }
+
+  &__author {
+    font-family: var(--font-text);
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-align: right;
+    margin: 0;
+    margin-top: 0.8rem;
+
+    @include md-up {
+      font-size: 2.4rem;
+      margin-top: 1.2rem;
+    }
+  }
+
+  &__badge {
+    background-color: var(--Secondary);
+    border-radius: 2rem;
+    padding: 0.6rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    justify-content: center;
+
+    @include md-up {
+      width: auto;
+      border-radius: 3rem;
+      padding: 1.2rem 1.8rem;
+      gap: 1.2rem;
+    }
+
+    @include lg-up {
+      border-radius: 5rem;
+      padding: 1.3rem 2rem;
+    }
+  }
+
+  &__badge-img {
+    height: 3.2rem;
+    width: auto;
+    object-fit: contain;
+
+    @include md-up {
+      height: 4rem;
+    }
+
+    @include xl-up {
+      height: 4.8rem;
+    }
+  }
+
+  &__badge-text {
+    color: var(--Black);
+    font-family: var(--font-text);
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin: 0;
+
+    strong {
+      font-weight: 700;
+    }
+
+    @include md-up {
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+
+    @include lg-up {
+      font-size: 2rem;
+      line-height: 1.4;
+    }
+
+    @include xl-up {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__platforms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.6rem 2.4rem; // row-gap col-gap on mobile
+    width: 100%;
+
+    @include md-up {
+      width: auto;
+      gap: 2.4rem 3.2rem;
+      flex-wrap: wrap;
+    }
+
+    @include lg-up {
+      gap: 4rem; // 40px based on design
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__platform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__platform-img {
+    width: 100%;
+    max-width: 9rem; // adjusted for mobile so they fit 3 on a row (3 logos + gap)
+    height: auto;
+    object-fit: contain;
+    max-height: 40px;
+
+    @include md-up {
+      max-width: 12rem;
+      max-height: 48px;
+    }
+
+    @include lg-up {
+      max-width: none;
+      max-height: 56px;
+      min-height: 50px;
+    }
+  }
+}

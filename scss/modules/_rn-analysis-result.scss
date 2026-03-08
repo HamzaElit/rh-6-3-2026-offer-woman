@@ -1,0 +1,103 @@
+@import "../mixins/mixins-master";
+
+.rn-analysis-result {
+  background-color: var(--White);
+  padding-block: 4rem;
+
+  @include md-up {
+    padding-block: 6rem;
+  }
+  @include lg-up {
+    padding-block: 8rem;
+  }
+
+  &__header {
+    text-align: left;
+    margin-bottom: 2rem;
+
+    @include md-up {
+      text-align: center;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-text);
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--Black);
+    margin: 0;
+
+    @include md-up {
+      font-size: 3.2rem;
+    }
+    @include lg-up {
+      font-size: 4rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card {
+    border: 1.13px solid var(--Secondary-2);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 35rem;
+
+    @include md-up {
+      max-width: 39.5rem;
+      border-radius: 0.9rem;
+    }
+  }
+
+  &__image-box {
+    position: relative;
+    padding: 1.8rem 2.2rem;
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include md-up {
+      padding: 2rem 2.5rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  &__label {
+    background-color: var(--Secondary-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 0.8rem;
+    margin: 0;
+
+    p {
+      color: var(--Secondary-3);
+      font-family: var(--font-text);
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.4;
+      margin: 0;
+      text-align: center;
+
+      @include md-up {
+        font-size: 2rem;
+      }
+    }
+  }
+}
