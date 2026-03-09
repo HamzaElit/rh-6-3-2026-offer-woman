@@ -1,8 +1,8 @@
 .rn-before-after-slider-tab {
-  padding: 40px 0;
+  padding: 40px 0 20px;
 
   @include lg-up {
-    padding: 100px 0 40px;
+    padding: 80px 0 40px;
   }
 
   &__content {

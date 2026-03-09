@@ -1,0 +1,42 @@
+.rn-iframe {
+  padding: 40px 0;
+
+  @include md-up {
+    padding: 60px 0;
+  }
+  @include lg-up {
+    padding: 80px 0;
+  }
+
+  &__header {
+    margin-bottom: 24px;
+
+    @include md-up {
+      text-align: center;
+    }
+
+    @include xl-up {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    color: var(--Primary);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @include md-up {
+      font-size: 32px;
+    }
+
+    @include xl-up {
+      font-size: 40px;
+    }
+  }
+  .pano {
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+  }
+}

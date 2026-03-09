@@ -2,7 +2,14 @@
 
 .rn-inclusive-package {
   background-color: var(--Cloud-Blue);
-  padding: var(--block-gap) 0;
+  padding: 40px 0;
+
+  @include md-up {
+    padding: 60px 0;
+  }
+  @include lg-up {
+    padding: 80px 0;
+  }
 
   &__container {
     display: flex;

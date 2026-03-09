@@ -41,6 +41,12 @@
     }
   }
 
+  &.full-width-slider {
+    --slide-size: 80%; // Base mobile size
+    --slide-size-sm: 37%;
+    --slide-size-lg: 20%;
+  }
+
   &.em__twoColumns-02 {
     --slide-size: 80%; // Base mobile size
 
