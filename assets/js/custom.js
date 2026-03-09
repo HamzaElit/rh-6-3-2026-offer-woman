@@ -539,6 +539,32 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   })();
+  // Why Us Tab Slider functionality
+  (() => {
+    const section = document.querySelector(".rn-why-us-tab-slider");
+    if (!section) return;
+
+    const tabs = section.querySelectorAll(".rn-why-us-tab-slider__tab");
+    const panels = section.querySelectorAll(".rn-why-us-tab-slider__panel");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        // Remove active class from all tabs and panels
+        tabs.forEach((t) => t.classList.remove("active"));
+        panels.forEach((p) => p.classList.remove("active"));
+
+        // Add active class to the clicked tab
+        tab.classList.add("active");
+
+        // Show the corresponding panel
+        const targetId = tab.dataset.tab;
+        const panel = section.querySelector(`#${targetId}`);
+        if (panel) {
+          panel.classList.add("active");
+        }
+      });
+    });
+  })();
 });
 
 window.addEventListener("load", function () {

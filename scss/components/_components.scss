@@ -193,13 +193,13 @@ details {
     &::after {
       content: " ";
       width: 10px;
-      height: 1.2px;
+      height: 0.12rem;
       display: inline-block;
       position: absolute;
       right: 0.7rem;
       transform: none; // Mobile transform first
       transition: 0.3s all ease;
-      background-color: var(--Deep-Blue);
+      background-color: var(--Primary);
       background-image: none;
       border-radius: 50vh;
       z-index: 1;
@@ -208,7 +208,7 @@ details {
       @include lg-up {
         top: 50%;
         width: 14px;
-        height: 2px;
+        height: 0.12rem;
         right: 9px;
       }
     }
@@ -216,9 +216,9 @@ details {
       transform: rotate(-90deg);
     }
     &::after {
-      transform: translateY(calc(-50% + 0.8px));
+      transform: translateY(calc(-50%));
       @include lg-up {
-        transform: translateY(calc(-50% + 1.2px));
+        transform: translateY(calc(-50%));
       }
     }
   }
@@ -253,7 +253,7 @@ details {
   &.accordion__item {
     transition: 0.3s all ease;
     background-color: white;
-    border-bottom: solid 1px var(--Deep-Blue);
+    border-bottom: solid 1px var(--Primary);
   }
 
   &.accordion__item[open] {
