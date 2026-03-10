@@ -649,3 +649,32 @@ window.addEventListener("load", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Floating button reveal/hide logic
+  const floatingBtn = document.getElementById("rn-floating-btn");
+  const footerSection = document.querySelector(".rn-footer");
+
+  if (floatingBtn && footerSection) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Reached footer (end of trust section), hide the floating btn
+            floatingBtn.classList.add("is-hidden");
+          } else {
+            // Above footer, show floating btn
+            floatingBtn.classList.remove("is-hidden");
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0,
+      }
+    );
+
+    observer.observe(footerSection);
+  }
+});

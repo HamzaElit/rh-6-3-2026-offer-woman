@@ -1,0 +1,21 @@
+.rn-inclusive-package.rn-faq {
+  background-color: var(--Secondary-3);
+  .rn-inclusive-package__title {
+    text-align: left;
+    @include lg-up {
+      text-align: center;
+      color: var(--Secondary-2);
+    }
+  }
+  details .accordion__quesion,
+  details .accordion__answer p {
+    color: var(--Secondary-2);
+  }
+  .accordion__quesion:after,
+  details .accordion__quesion:before {
+    background-color: var(--Secondary-2);
+  }
+  .accordion__item {
+    border-bottom-color: var(--Secondary-2);
+  }
+}

@@ -1,0 +1,50 @@
+@import "../mixins/mixins-master";
+
+.rn-floating-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--Primary);
+  color: var(--Secondary-3);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px; // Keep it slightly compact for mobile
+  padding: 0 16px;
+  border-radius: 108.9px;
+  height: 48px;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+  }
+
+  @include md-up {
+    display: none; // Hide on tablets and desktops
+  }
+
+  &:hover {
+    background-color: var(--Primary-2);
+    color: var(--Secondary-3);
+    transform: translateY(-2px);
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+}
