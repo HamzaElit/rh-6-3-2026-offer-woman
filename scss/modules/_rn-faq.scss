@@ -2,6 +2,7 @@
   background-color: var(--Secondary-3);
   .rn-inclusive-package__title {
     text-align: left;
+    color: var(--Secondary-2);
     @include lg-up {
       text-align: center;
       color: var(--Secondary-2);
