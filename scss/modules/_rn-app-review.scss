@@ -172,12 +172,13 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.6rem 2.4rem; // row-gap col-gap on mobile
-    width: 100%;
+    width: 323px;
 
     @include md-up {
       width: auto;
       gap: 2.4rem 3.2rem;
       flex-wrap: wrap;
+      width: 100%;
     }
 
     @include lg-up {
