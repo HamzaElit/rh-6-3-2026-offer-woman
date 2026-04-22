@@ -10,11 +10,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
+    max-width: 834px; // Tablet width
+    margin: 0 auto;
+
+    @include lg-up {
+      gap: 32px;
+      max-width: 822px; // Desktop width
+    }
   }
 
   &__title {
-    font-family: "Instrument Sans", sans-serif;
+    font-family: var(--font-text);
     font-size: 28px;
     font-weight: 700;
     line-height: 1.2;
@@ -24,8 +31,12 @@
     margin: 0;
 
     @include md-up {
-      font-size: 40px;
+      font-size: 32px;
       text-align: center;
+    }
+
+    @include lg-up {
+      font-size: 40px;
     }
   }
 
@@ -33,7 +44,6 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin-bottom: -16px; // Offset for gap
   }
 
   &__tab {
@@ -46,8 +56,8 @@
     border-bottom: 4px solid #ccbbab;
     background: transparent;
     color: #ada093;
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 20px;
+    font-family: var(--font-text);
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.2;
     cursor: pointer;
@@ -56,7 +66,7 @@
 
     @include md-up {
       padding-bottom: 16px;
-      font-size: 24px;
+      font-size: 22px;
       text-align: center;
       justify-content: center;
     }
@@ -78,85 +88,66 @@
     }
   }
 
-  &__cards {
+  &__list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-
-    @include lg-up {
-      flex-direction: row;
-    }
-  }
-
-  &__card {
-    flex: 1;
-    background-color: var(--Secondary);
-    border-radius: 8px;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    align-items: center; // For mobile
-    gap: 16px;
-
-    @include lg-up {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-
-  &__card-image {
-    width: 140px;
-    height: 100px;
-    border-radius: 8px;
+    background-color: var(--White);
+    border-radius: 12px;
     overflow: hidden;
-    flex-shrink: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--Secondary-3);
+    min-height: 48px;
+
+    &:last-child {
+      border-bottom: none;
+    }
 
     @include lg-up {
-      width: 100%;
-    }
-
-    &.placeholder {
-      background-color: #e6e6e6;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      min-height: 56px;
     }
   }
 
-  &__card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    flex: 1;
-  }
-
-  &__tag {
-    background-color: var(--Secondary-3);
+  &__item-tag {
+    background-color: var(--Secondary);
     color: var(--Secondary-2);
-    padding: 6px 10px;
-    border-radius: 100px;
-    font-family: "Instrument Sans", sans-serif;
+    font-family: var(--font-text);
     font-size: 16px;
     font-weight: 700;
     line-height: 1.2;
     text-transform: uppercase;
-    white-space: nowrap;
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    width: 80px;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 6px 4px;
+
+    @include lg-up {
+      width: 120px;
+      font-size: 18px;
+    }
   }
 
-  &__desc {
-    color: #111;
-    font-family: "Instrument Sans", sans-serif;
+  &__item-desc {
+    color: var(--Black);
+    font-family: var(--font-text);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.4;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    flex: 1;
+
+    @include lg-up {
+      font-size: 18px;
+      padding: 12px 20px;
+    }
   }
 }
 
